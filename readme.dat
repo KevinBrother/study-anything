@@ -16,6 +16,7 @@ study-anything skill 代码改动记录
   - topics/INDEX.md             全文           主题索引表（分类 + tags）
   - topics/_learner.md          全文           跨主题学习者画像
 其他：
+  - .gitignore                  第 1 行        忽略 .DS_Store
   - 初始化 git 仓库
   - 创建软链接 ~/.claude/skills/study-anything -> ~/.agents/skills/study-anything（Claude Code 用；Cursor、Codex 直接读 ~/.agents/skills）
 暂未实现（第二版）：一页速查表、统计面板
