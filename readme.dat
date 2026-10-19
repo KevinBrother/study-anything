@@ -1,0 +1,21 @@
+study-anything skill 代码改动记录
+==================================
+
+[2026-10-19 18:26 - 18:28] 初始创建
+目的：将"用 AI 学习任何东西的 6 步法"（学习阶梯、重点 20%、学习计划、考官、速查表、费曼）
+      抽象为可记录、可迭代、可进化的 skill，学习数据按主题保存在本目录 topics/ 下并建立索引。
+新增文件：
+  - SKILL.md                    第 1-86 行     入口：触发描述、启动流程、模式路由、学习链路、交互原则、记录规则、目录与索引约定
+  - workflows/plan.md           全文           新建主题：需求了解、5 级阶梯、重点 20%、N 次计划
+  - workflows/resources.md      全文           资源筛选：联网验证、5 个资源、7 天路径、持续维护
+  - workflows/session.md        全文           按计划学习一次：开场、答疑陪练、结束打卡、节奏调整信号
+  - workflows/exam.md           全文           考官模式：出题优先级、一次一题、0-10 评分、薄弱点状态规则
+  - workflows/feynman.md        全文           费曼模式：AI 先讲、用户复述、四项诊断、重讲循环
+  - workflows/review.md         全文           复盘：数据分析、调整建议、修订落地
+  - templates/*.md              全文           主题文件模板（profile/ladder/plan/resources/log/weak-points/changelog）
+  - topics/INDEX.md             全文           主题索引表（分类 + tags）
+  - topics/_learner.md          全文           跨主题学习者画像
+其他：
+  - 初始化 git 仓库
+  - 创建软链接 ~/.claude/skills/study-anything -> ~/.agents/skills/study-anything（Claude Code 用；Cursor、Codex 直接读 ~/.agents/skills）
+暂未实现（第二版）：一页速查表、统计面板
