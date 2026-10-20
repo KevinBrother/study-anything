@@ -28,7 +28,7 @@
   1. 跑通现有 e2e，逐项读懂 playwright.config（约 30 分钟）
   2. 用 codegen 录制一个页面操作，保存为测试文件（约 30 分钟）
   3. 分别用 headed / --debug / --ui 模式跑同一个测试，观察差异（约 15 分钟）
-- 资源：待资源筛选
+- 资源：官方文档 intro（跳过安装）+ writing-tests + codegen（resources.md #1）
 - 复盘问题：
   1. playwright.config 里 projects、testDir、use 各控制什么？
   2. 一个 test 文件从被加载到执行完经历哪几个阶段？
@@ -43,7 +43,7 @@
   1. 官方 Locators 文档 + 在技能模型列表页实践 role 定位（约 30 分钟）
   2. 手写 3 个核心页面的定位测试（不用 codegen）（约 40 分钟）
   3. 用 filter / and / or 处理重复元素场景（约 10 分钟）
-- 资源：待资源筛选
+- 资源：官方文档 /docs/locators（resources.md #1）
 - 复盘问题：
   1. 为什么 getByRole 优先于 css/xpath？各自的失效场景是什么？
   2. filter 和 nth 分别什么场景用？nth(0) 有什么风险？
@@ -58,7 +58,7 @@
   1. 官方 auto-waiting + assertions 文档（约 25 分钟）
   2. 把项目里一个含显式等待的测试改写为 web-first 断言（约 20 分钟）
   3. 故意制造 unstable / intercepted / not visible 三种报错并逐一解读（约 35 分钟）
-- 资源：待资源筛选
+- 资源：官方文档 /docs/assertions + /docs/actionability（resources.md #1）
 - 复盘问题：
   1. click 前的 actionability 检查有哪几步？每步对应什么报错？
   2. expect(locator).toBeVisible() 和 expect(await locator.isVisible()) 的本质区别？
@@ -73,7 +73,7 @@
   1. 官方 visual comparisons 文档 + 为一个页面加 toHaveScreenshot（约 40 分钟）
   2. 改动 UI 体验 --update-snapshots 的更新流程与 git 冲突处理（约 20 分钟）
   3. 配置 maxDiffPixelRatio / maxDiffPixels 容差（约 15 分钟）
-- 资源：待资源筛选
+- 资源：官方文档 /docs/test-snapshots（resources.md #2）
 - 复盘问题：
   1. 什么该用视觉回归、什么该用 DOM 断言？各自盲区是什么？
   2. baseline 放哪、多人协作时更新冲突怎么处理？
@@ -88,7 +88,7 @@
   1. 精读 e2e/mocks/model-api.ts 现有实现（约 20 分钟）
   2. 官方 network 文档 + route 拦截练习（约 30 分钟）
   3. 新增一个接口报错（500/超时）场景的测试（约 30 分钟）
-- 资源：待资源筛选
+- 资源：官方文档 /docs/network + /docs/mock + 项目 e2e/mocks/model-api.ts（resources.md #2）
 - 复盘问题：
   1. route 的 glob 匹配规则是什么？拦截过宽有什么风险？
   2. mock 数据写死会导致什么脆弱性？怎么组织 mock 数据？
@@ -103,7 +103,7 @@
   1. 官方 authentication 文档（约 20 分钟）
   2. 写一个 setup 项目执行登录并保存 storageState（约 45 分钟）
   3. 让现有测试改为复用 storageState 跑通（约 15 分钟）
-- 资源：待资源筛选
+- 资源：官方文档 /docs/auth（基础方案，session storage 部分先跳过）（resources.md #2）
 - 复盘问题：
   1. storageState 里存了什么？什么时候会失效？
   2. setup 项目（dependencies）和普通测试项目的执行顺序是怎么保证的？
@@ -118,7 +118,7 @@
   1. 官方 test fixtures 文档（约 25 分钟）
   2. 将项目公共 setup（登录态/mock 加载等）重构为自定义 fixture（约 40 分钟）
   3. 用 tags / test.describe 分组，练习 --grep 过滤运行（约 15 分钟）
-- 资源：待资源筛选
+- 资源：官方文档 /docs/test-fixtures（resources.md #2）
 - 复盘问题：
   1. fixture 和 beforeEach 的区别？各自的适用场景？
   2. test fixture 和 worker fixture 的生命周期差异是什么？
@@ -133,7 +133,7 @@
   1. 开 trace 跑测试，用 show-trace 完整回放一遍（约 25 分钟）
   2. 排查项目里一个真实（或人为制造）的失败测试（约 40 分钟）
   3. 写一篇排障笔记：报错 → trace 证据 → 根因 → 修复（约 15 分钟）
-- 资源：待资源筛选
+- 资源：官方文档 /docs/trace-viewer（resources.md #3）
 - 复盘问题：
   1. trace.zip 里包含哪几类信息？分别用来回答什么问题？
   2. --debug 模式和 trace 各自适合什么排查场景？
@@ -148,7 +148,7 @@
   1. 精读现有 GitLab quality gate 配置（约 20 分钟）
   2. 配 projects：多浏览器 + devices 移动模拟（约 40 分钟）
   3. 配 workers 并行、retries、HTML reporter（约 20 分钟）
-- 资源：待资源筛选
+- 资源：官方文档 /docs/ci 的 GitLab 章节（resources.md #3）；projects/devices 多环境配置由 AI 陪练讲解
 - 复盘问题：
   1. workers 并行时测试之间靠什么隔离？哪些共享状态会出问题？
   2. retries 设置过高会掩盖什么问题？
@@ -161,9 +161,9 @@
 - 学习目标：能完整讲清一条 click 指令从测试代码到浏览器的全过程
 - 练习任务：
   1. 官方架构说明 + 源码目录结构阅读（约 35 分钟）
-  2. 读 playwright-core 的 injected 目录（selector 引擎 / actionability）（约 30 分钟）
+  2. 读 playwright 仓库 packages/injected/src（注意：已从 playwright-core 移出），重点 selectorEngine.ts / roleSelectorEngine.ts / injectedScript.ts（约 30 分钟）
   3. 写原理笔记：一条指令的完整旅程（约 15 分钟）
-- 资源：待资源筛选
+- 资源：playwright 源码 packages/injected/src + AI 陪练讲解（resources.md #5）
 - 复盘问题：
   1. client、driver、浏览器三层各自负责什么？靠什么协议通信？
   2. 注入脚本注入到哪里、负责哪几件事？
@@ -172,12 +172,12 @@
 
 ### [ ] 第 11 次（L5，2 小时）
 
-- 新核心概念：组件测试（Playwright CT）
+- 新核心概念：组件测试（Playwright CT，新版 story gallery + mount fixture 方案，`@playwright/experimental-ct-*` 已移除）
 - 学习目标：为一个 React 组件写 CT 测试并明确 CT/E2E 边界
 - 练习任务：
-  1. 官方 component testing 文档 + 项目 CT 配置（约 40 分钟）
-  2. 为一个核心 React 组件写 CT 测试（含交互与断言）（约 40 分钟）
-- 资源：待资源筛选
+  1. 官方 test-components 文档 + `npx playwright init-skills` 初始化 story gallery 与项目 CT 配置（约 40 分钟）
+  2. 为一个核心 React 组件写 story + spec 测试（含交互与断言）（约 40 分钟）
+- 资源：官方文档 /docs/test-components（resources.md #4）
 - 复盘问题：
   1. CT 的 mount 和 E2E 打开页面有什么本质区别？
   2. 什么该用 CT 测、什么必须用 E2E 测？边界在哪？
@@ -191,7 +191,7 @@
 - 练习任务：
   1. 用 AI 为一个新页面生成 E2E 测试，人工审校后入库（约 60 分钟）
   2. 总结一页"AI 生成测试审校清单"（定位器健壮性/断言充分性/mock 合理性）（约 20 分钟）
-- 资源：待资源筛选
+- 资源：官方文档 /docs/best-practices（总复习翻阅）+ AI 陪练讲解审校清单（resources.md 补充说明）
 - 复盘问题：
   1. AI 生成的测试典型坏味道有哪几类？
   2. trace 怎么喂给 AI 才能高效定位失败原因？
