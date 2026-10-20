@@ -2,7 +2,7 @@
 
 | 主题 | slug | 分类 | tags | 当前等级 | 计划进度 | 待巩固薄弱点 | 最近活动 |
 |---|---|---|---|---|---|---|---|
-| Playwright | playwright | 编程 | playwright, e2e, testing, browser-automation, react | L2 | 0/12 | 0 | 2026-10-20 |
+| Playwright | playwright | 编程 | playwright, e2e, testing, browser-automation, react | L2 | 1/12 | 0 | 2026-10-20 |
 
 ## tag 词表
 
